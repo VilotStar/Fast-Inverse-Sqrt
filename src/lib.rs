@@ -8,6 +8,10 @@ pub fn fast_inv_sqrt(x: f64) -> f64 {
     y * (1.5 - ((0.5 * x) * y * y))
 }
 
+pub fn internal_inv_sqrt(x: f64) -> f64 {
+    x.sqrt().recip()
+}
+
 pub fn normal_inv_sqrt(x: f64) -> f64 {
     1.0 / x.sqrt()
 }

@@ -4,7 +4,8 @@ use fastsqrt::*;
 fn bench_invs_sqrts(c: &mut Criterion) {
     let mut group = c.benchmark_group("invssqrt");
     group.bench_function("fast inv sqrt 25", |b| b.iter(|| fast_inv_sqrt(black_box(25.0))));
-    group.bench_function("norm inv sqrt 25", |b| b.iter(|| normal_inv_sqrt(black_box(25.0))));
+    group.bench_function("internal inv sqrt 25", |b| b.iter(|| normal_inv_sqrt(black_box(25.0))));
+    group.bench_function("norm inv sqrt 25", |b| b.iter(|| internal_inv_sqrt(black_box(25.0))));
     group.finish();
 }
 
