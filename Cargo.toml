@@ -1,0 +1,11 @@
+[package]
+name = "fastsqrt"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+criterion = { version = "0.5.1" }
+
+[[bench]]
+name = "sqrt"
+harness = false
